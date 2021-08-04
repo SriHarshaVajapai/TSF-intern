@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+body{
+    background-color: #FEFFFF;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1494488180300-4c634d1b2124?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGJhbmt8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+}
+
+.navbar{
+    background-color: rgb(23, 37, 42);
+    transition-duration: 0.5s;
+}
+
+#navbar-brand{
+    color: #FEFFFF;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+
+button{
+    background-color: #3aafa9;
+    border-radius: 20px;
+    border: none;
+    margin-left: 10px;
+}
+
+
+h2{
+    font-family: 'Merriweather', serif;
+}
+
+h4{
+    display: inline-block;
+}
+
+h6{
+    display: inline-block;
+}
+
+#myImg {
+    border-radius: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

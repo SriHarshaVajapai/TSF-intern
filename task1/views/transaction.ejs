@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/detailsStyle.css">
+    <title>Simple Bank</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-none">
+        <div class="container-fluid">
+          <a id="navbar-brand" href="#">
+              Simple <br> Bank
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button><a style="color: rgb(23, 37, 42);" class="nav-link" aria-current="page" href="/">Home</a></button>
+              </li>
+              <li class="nav-item">
+                <button><a style="color: rgb(23, 37, 42);" class="nav-link" href="/customerdetails">View all Customers</a></button>
+              </li>
+              <li class="nav-item">
+                <button><a style="color: rgb(23, 37, 42);" class="nav-link" href="/transactionHistory">Transaction History</a></button>
+              </li>
+              <li class="nav-item">
+                <button><a style="color: rgb(23, 37, 42);" class="nav-link" href="#">Contact</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-5 p-5 bg-light rounded">
+          <div class="row">
+              <div id="back-img" class="col-lg-6">
+                  <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFua3xlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 text-center">
+                <h4>Pay from: <span class="text-danger"><%= detail[0].name %></span></h4>
+                <br>
+                <h4>Current Balance: <span class="text-danger"><%= detail[0].current_balance %></span></h4>
+                <hr>
+                <form method="POST" action="/customerdetails/<%= detail[0].id %>?_method=PUT">
+                    <label for="pay_to">Pay To:</label>
+                    <select class="form-select mt-2" aria-label="Default select example" name="pay_to" id="pay_to">
+                      <% all.forEach(function(customer){ %>
+                        <% if(customer.name != detail[0].name) { %>
+                            <option value="<%= customer.name%>"><%= customer.name%></option>
+                        <% }%>
+                    <% }) %>
+                    </select>
+                    <br>
+                    <div class="form-floating mb-3 mt-3">
+                      <input name="amount" type="number" class="form-control" id="floatingInput" placeholder="Amount">
+                      <label for="floatingInput">Amount</label>
+                    </div>
+                    <br>
+                    <input class="btn btn-success btn-lg" type="submit" value="Submit">
+                </form>
+              </div>
+          </div>
+      </div>
+    
+<%- include ("partials/footer") %>

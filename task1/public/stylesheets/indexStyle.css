@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body{
+    background-color: #3aafa9;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1609875149254-518850e92ff0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar{
+    background-color: rgb(23, 37, 42);
+    transition-duration: 0.5s;
+}
+
+#navbar-brand{
+    color: #FEFFFF;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+
+button{
+    background-color: #3aafa9;
+    border-radius: 20px;
+    border: none;
+    margin-left: 10px;
+}
+
+
+.intro{
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+}
+
+h1{
+    color: #FEFFFF;
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+}
+
+pre{
+    color: #FEFFFF;
+    font-size: 1rem;
+}
